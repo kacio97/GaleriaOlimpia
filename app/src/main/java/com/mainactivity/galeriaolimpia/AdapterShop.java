@@ -2,12 +2,15 @@ package com.mainactivity.galeriaolimpia;
 
 import android.app.Activity;
 import android.content.Context;
+import android.hardware.camera2.TotalCaptureResult;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +18,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class AdapterShop extends ArrayAdapter<Shop> {
 
@@ -54,11 +58,20 @@ public class AdapterShop extends ArrayAdapter<Shop> {
         public ImageView displayView;
         public TextView tvName;
         public TextView tvInfo;
+
+    }
+
+    public static class ViewHolderShop {
+        public ImageView logo;
+        public ImageView photo;
+        public TextView shopName;
+        public EditText phone;
+        public EditText description;
     }
 
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, final View convertView, ViewGroup parent) {
         View view = convertView;
         final ViewHolder holder;
 
@@ -82,6 +95,38 @@ public class AdapterShop extends ArrayAdapter<Shop> {
         } catch (Exception e) {
 
         }
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+               final ViewHolderShop holderShop = new ViewHolderShop();
+
+               v = inflater.inflate(R.layout.shop_details_layout, null);
+
+               holderShop.logo = v.findViewById(R.id.ivLogo);
+               holderShop.photo = v.findViewById(R.id.ivPic);
+               holderShop.shopName = v.findViewById(R.id.tvShopName);
+               holderShop.phone = v.findViewById(R.id.etPhone);
+               holderShop.description = v.findViewById(R.id.etDescription);
+
+               v.setTag(holderShop);
+
+                String info = "LIST VIEW CLICK LISTENER at " + position + " position";
+                Toast toast = Toast.makeText(getContext(), info, Toast.LENGTH_LONG);
+                toast.show();
+
+                holderShop.logo.setImageResource(shops.get(position).getImg());
+                holderShop.photo.setImageResource(shops.get(position).getImgShop());
+                holderShop.shopName.setText(shops.get(position).getCategory());
+                holderShop.phone.setText(shops.get(position).getPhone());
+                holderShop.description.setText(shops.get(position).getDescription());
+
+
+
+                activity.setContentView(v);
+            }
+        });
 
         return view;
     }

@@ -5,11 +5,41 @@ public class Shop {
     private int img;
     private String category;
     private String openHr;
+    private String description;
+    private String phone;
+    private int imgShop;
 
-    public Shop(int img, String category, String openHr) {
+    public int getImgShop() {
+        return imgShop;
+    }
+
+    public void setImgShop(int imgShop) {
+        this.imgShop = imgShop;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Shop(int img, String category, String openHr, String description, String phone, int imgShop) {
         this.img = img;
         this.category = category;
         this.openHr = openHr;
+        this.description = description;
+        this.phone = phone;
+        this.imgShop = imgShop;
     }
 
     public int getImg() {
