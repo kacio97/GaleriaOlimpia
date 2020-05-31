@@ -23,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "on create method running");
 
-        ImageButton imageButton = findViewById(R.id.sklepyButton);
+        ImageButton shopButton = findViewById(R.id.sklepyButton);
+        ImageButton cinemaButton = findViewById(R.id.kinoButton);
 
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        shopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ShopListActivity.class);
@@ -33,7 +34,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        cinemaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CinemaActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
