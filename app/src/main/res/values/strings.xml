@@ -3,4 +3,6 @@
     <string name="logo">LOGO</string>
     <string name="category">category</string>
     <string name="godziny_otwarcia">godziny otwarcia</string>
+    <string name="repertuar">Repertuar</string>
+    <string name="cennik">Cennik</string>
 </resources>

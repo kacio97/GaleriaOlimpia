@@ -4,6 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".RepetorieActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/helios_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/repertuar"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:background="#000000"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <ImageButton
+            android:id="@+id/ibtPon"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="#00FFFFFF"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/pon_button" />
+
+        <ImageButton
+            android:id="@+id/ibtWt"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="#00FFFFFF"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/wt_button" />
+
+        <ImageButton
+            android:id="@+id/ibtSr"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="#00FFFFFF"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/sr_button" />
+
+        <ImageButton
+            android:id="@+id/ibtCz"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="#00FFFFFF"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/czw_button" />
+
+        <ImageButton
+            android:id="@+id/ibtPt"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="#00FFFFFF"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/pt_button" />
+
+        <ImageButton
+            android:id="@+id/ibtSb"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="#00FFFFFF"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/sb_button" />
+
+        <ImageButton
+            android:id="@+id/ibtNd"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="#00FFFFFF"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/nd_button" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
