@@ -2,6 +2,7 @@ package com.mainactivity.galeriaolimpia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -41,31 +42,41 @@ public class RepetorieActivity extends AppCompatActivity implements View.OnClick
         //TODO: Stworzyć intent, putExtra() i nowe Activity dla danego Dnia
         switch (v.getId()){
             case R.id.ibtPon:{
-
+                Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
+                intent.putExtra("dzien", 1);
+                startActivity(intent);
             }
             case R.id.ibtWt:{
-
+                Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
+                intent.putExtra("dzien", 2);
+                startActivity(intent);
             }
             case R.id.ibtSr:{
-
+                Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
+                intent.putExtra("dzien", 3);
+                startActivity(intent);
             }
             case R.id.ibtCz:{
-
+                Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
+                intent.putExtra("dzien", 4);
+                startActivity(intent);
             }
             case R.id.ibtPt:{
-
+                Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
+                intent.putExtra("dzien", 5);
+                startActivity(intent);
             }
             case R.id.ibtSb:{
-
+                Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
+                intent.putExtra("dzien", 6);
+                startActivity(intent);
             }
             case R.id.ibtNd:{
-
+                Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
+                intent.putExtra("dzien", 7);
+                startActivity(intent);
             }
         }
-    }
-
-    public void fillData(){
-
     }
 
 }

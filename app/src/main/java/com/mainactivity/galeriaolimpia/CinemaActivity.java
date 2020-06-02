@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -22,10 +23,20 @@ public class CinemaActivity extends AppCompatActivity {
         ImageButton repetorie = findViewById(R.id.ibtRep);
         ImageButton priceList = findViewById(R.id.ibtCenn);
 
+        Button btList = findViewById(R.id.btMovieList);
+
         repetorie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RepetorieActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MovieListActivity.class);
                 startActivity(intent);
             }
         });
