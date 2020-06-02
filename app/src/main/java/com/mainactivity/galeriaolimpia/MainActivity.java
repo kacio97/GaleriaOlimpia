@@ -1,16 +1,12 @@
 package com.mainactivity.galeriaolimpia;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ListView;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton shopButton = findViewById(R.id.sklepyButton);
         ImageButton cinemaButton = findViewById(R.id.kinoButton);
+        ImageButton map = findViewById(R.id.btDojazd);
 
         shopButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CinemaActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
