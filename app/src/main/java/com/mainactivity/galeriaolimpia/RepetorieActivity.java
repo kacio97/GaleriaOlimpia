@@ -1,18 +1,13 @@
 package com.mainactivity.galeriaolimpia;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import java.util.ArrayList;
-import java.util.Map;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class RepetorieActivity extends AppCompatActivity implements View.OnClickListener {
-
-    private Map<String, ArrayList<Movie>> repertuar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,38 +38,45 @@ public class RepetorieActivity extends AppCompatActivity implements View.OnClick
         switch (v.getId()){
             case R.id.ibtPon:{
                 Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
-                intent.putExtra("dzien", 1);
+                intent.putExtra("dzien", "poniedzialek");
                 startActivity(intent);
+                break;
             }
             case R.id.ibtWt:{
                 Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
-                intent.putExtra("dzien", 2);
+                intent.putExtra("dzien", "wtorek");
                 startActivity(intent);
+                break;
             }
             case R.id.ibtSr:{
                 Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
-                intent.putExtra("dzien", 3);
+                intent.putExtra("dzien", "sroda");
                 startActivity(intent);
+                break;
             }
             case R.id.ibtCz:{
                 Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
-                intent.putExtra("dzien", 4);
+                intent.putExtra("dzien", "czwartek");
                 startActivity(intent);
+                break;
             }
             case R.id.ibtPt:{
                 Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
-                intent.putExtra("dzien", 5);
+                intent.putExtra("dzien", "piatek");
                 startActivity(intent);
+                break;
             }
             case R.id.ibtSb:{
                 Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
-                intent.putExtra("dzien", 6);
+                intent.putExtra("dzien", "sobota");
                 startActivity(intent);
+                break;
             }
             case R.id.ibtNd:{
                 Intent intent = new Intent(getApplicationContext(), RepetorieSingleDayActivity.class);
-                intent.putExtra("dzien", 7);
+                intent.putExtra("dzien", "niedziela");
                 startActivity(intent);
+                break;
             }
         }
     }

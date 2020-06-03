@@ -5,4 +5,12 @@
     <string name="godziny_otwarcia">godziny otwarcia</string>
     <string name="repertuar">Repertuar</string>
     <string name="cennik">Cennik</string>
+    <string name="bilety_3d"><u>Bilety 3D</u></string>
+    <string name="bilety_2d"><u>Bilety 2D</u></string>
+    <string name="ka_dy_rodzaj_biletu">*Każdy rodzaj biletu</string>
+    <string name="cennik_bilet_w">Cennik biletów</string>
+    <string name="dop_ata_3_z_za_okulary">+ dopłata 3 zł za okulary</string>
+    <string name="_14_90_z">14,90 zł</string>
+    <string name="przez_ca_y_tydzie_n_cznie_ze_wi_tami">Przez cały tydzień łącznie ze świętami</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

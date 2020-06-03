@@ -1,13 +1,12 @@
 package com.mainactivity.galeriaolimpia;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CinemaActivity extends AppCompatActivity {
 
@@ -23,7 +22,7 @@ public class CinemaActivity extends AppCompatActivity {
         ImageButton repetorie = findViewById(R.id.ibtRep);
         ImageButton priceList = findViewById(R.id.ibtCenn);
 
-        Button btList = findViewById(R.id.btMovieList);
+        ImageButton ibtList = findViewById(R.id.ibtMovieList);
 
         repetorie.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,10 +32,18 @@ public class CinemaActivity extends AppCompatActivity {
             }
         });
 
-        btList.setOnClickListener(new View.OnClickListener() {
+        ibtList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MovieListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        priceList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PriceActivity.class);
                 startActivity(intent);
             }
         });
