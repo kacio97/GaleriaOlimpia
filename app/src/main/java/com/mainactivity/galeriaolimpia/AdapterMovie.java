@@ -2,6 +2,7 @@ package com.mainactivity.galeriaolimpia;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -88,6 +89,22 @@ public class AdapterMovie extends ArrayAdapter<Movie> {
         holderMovie.days.setText(movies.get(position).getPlayDay().toString());
         holderMovie.year.setText(movies.get(position).getYear());
         holderMovie.desc.setText(movies.get(position).getDescription());
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ShowingDetailsActivity.class);
+                intent.putExtra("logo", movies.get(position).getCover());
+                intent.putExtra("title", movies.get(position).getTitle());
+                intent.putExtra("year", movies.get(position).getYear());
+                intent.putExtra("desc", movies.get(position).getDescription());
+                intent.putExtra("category", movies.get(position).getCategory());
+                intent.putExtra("days", movies.get(position).getPlayDay().toString());
+                intent.putExtra("hours", movies.get(position).getPlayHour().toString());
+                intent.putExtra("room", movies.get(position).getRoom());
+                activity.startActivity(intent);
+            }
+        });
 
         return view;
     }
